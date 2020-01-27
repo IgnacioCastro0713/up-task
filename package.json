@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js",
-    "devbabel": "nodemon index.js --exec babel-node"
+    "startbabel": "nodemon index.js --exec babel-node"
   },
   "author": "José Ignacio Menchaca Castro",
   "license": "ISC",
