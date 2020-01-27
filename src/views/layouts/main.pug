@@ -4,8 +4,43 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="css/normalize.css")
-        link(rel="stylesheet", href="css/app.css")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        link(rel="stylesheet", href="css/materialize.min.css")
         title Title
     body
+        nav.nav-wrapper.light-blue.lighten-1
+                ul.left.hide-on-med-and-down
+                    li
+                        a.sidenav-trigger.show-on-large(href='#', data-target='menu-responsive')
+                            i.material-icons menu
+                    li
+                        a.brand-logo(href='#') Up-Task
+                ul.right.hide-on-med-and-down
+                    li
+                        a(href='#') Enlace
+                    li
+                        a(href='#') Enlace
+                    li
+                        a(href='#') Enlace
+
+        ul#menu-responsive.sidenav
+            li
+                a(href='#') Enlace
+            li
+                a(href='#') Enlace
+            li
+                a(href='#') Enlace
+
         block content
+
+
+    footer.page-footer.light-blue.lighten-1
+        .footer-copyright.light-blue.lighten-1
+            .container
+                | © 2020 Copyright Text
+
+    script(src="js/materialize.min.js")
+    script.
+        document.addEventListener('DOMContentLoaded', function () {
+          M.AutoInit();
+        });
