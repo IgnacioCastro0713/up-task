@@ -19,8 +19,10 @@ app.use(morgan('tiny'));
 // Routes
 app.use(HomeRoutes);
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log('Example app listening on port 3000!');
+// serve
+app.set('port', process.env.PORT || 3000);
+app.listen(app.get('port'), () => {
+    console.log('Example app listening on port ' + app.get('port'));
 });
 
 //Run app, then load http://localhost:3000 in a browser
