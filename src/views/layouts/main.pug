@@ -6,41 +6,56 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
         link(rel="stylesheet", href="css/materialize.min.css")
-        title Title
-    body
-        nav.nav-wrapper.light-blue.lighten-1
-                ul.left.hide-on-med-and-down
-                    li
-                        a.sidenav-trigger.show-on-large(href='#', data-target='menu-responsive')
-                            i.material-icons menu
-                    li
-                        a.brand-logo(href='#') Up-Task
-                ul.right.hide-on-med-and-down
-                    li
-                        a(href='#') Enlace
-                    li
-                        a(href='#') Enlace
-                    li
-                        a(href='#') Enlace
+        style.
+            footer {
+                background-color: black;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                color: white;
+                }
 
-        ul#menu-responsive.sidenav
-            li
-                a(href='#') Enlace
-            li
-                a(href='#') Enlace
-            li
-                a(href='#') Enlace
+    title Up Task
+    body
+        nav.nav-extended.indigo.darken-1
+            .nav-wrapper
+                a.brand-logo(href='#')
+                    i.large.material-icons layers
+                    | Up Task
+                a.sidenav-trigger(href='#', data-target='mobile-demo')
+                    i.material-icons menu
+                ul#nav-mobile.right.hide-on-med-and-down
+                    li
+                        a.waves-effect.deep-purple.accent-2.waves-light.btn
+                            |Proyecto
+                            i.material-icons.left add 
+                    li
+                        a(href='collapsible.html') Logout
+
+            ul#mobile-demo.sidenav
+                li
+                    a.waves-effect.deep-purple.accent-2.waves-light.btn
+                        |Proyecto
+                        i.material-icons.left add 
+                li
+                    a(href='collapsible.html') JavaScript
+
 
         block content
 
 
-    footer.page-footer.light-blue.lighten-1
-        .footer-copyright.light-blue.lighten-1
-            .container
-                | © 2020 Copyright Text
+        footer.page-footer.indigo.darken-1
+            .footer-copyright.indigo.darken-1
+                .container.right
+                    | © 
+                    script.
+                        document.write(new Date().getFullYear().toString())
+                    |  created by  
+                    a(href="https://github.com/IgnacioCastro0713" target="_blank") IgnacioCastro0713
 
-    script(src="js/materialize.min.js")
-    script.
-        document.addEventListener('DOMContentLoaded', function () {
-          M.AutoInit();
-        });
+        script(src="js/materialize.min.js")
+        script.
+            document.addEventListener('DOMContentLoaded', function () {
+                M.AutoInit();
+            });

@@ -1,4 +1,19 @@
 extends layouts/main
 
 block content
-    h1 home
+    .container
+        br
+        br
+        br
+        .row
+            .col.s12
+                form.col.s12
+                    .row
+                        .input-field.col.s7.offset-l2
+                            i.large.material-icons.prefix assignment
+                            input(type='text', name="search")
+                            label(for='icon_prefix2') search project
+                        button.btn.input-field.waves-effect.waves-light.deep-purple.accent-2(type='submit')
+                            | Search
+            .col.s6.green 6-columns (one-half)
+            .col.s6.orange 6-columns (one-half)
