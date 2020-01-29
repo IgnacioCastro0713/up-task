@@ -14,6 +14,16 @@ block content
                             input(type='text', name="search")
                             label(for='icon_prefix2') search project
                         button.btn.input-field.waves-effect.waves-light.deep-purple.accent-2(type='submit')
-                            | Search
-            .col.s6.green 6-columns (one-half)
-            .col.s6.orange 6-columns (one-half)
+                            | Search    
+
+            each val in [1, 2, 3, 4, 5]
+                .col.s6.m4
+                    .card.blue.darken-3.m2.waves-effect.waves-purple
+                        .card-content.white-text
+                            span.card-title Card Title
+                            p
+                                | I am a very simple card. I am good at containing small bits of information.
+                                | I am convenient because I require little markup to use effectively.
+                        .card-action
+                            a(href='#') This is a link
+                        
